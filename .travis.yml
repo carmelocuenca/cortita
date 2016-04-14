@@ -16,3 +16,11 @@ notifications:
   email:
     on_success: always
     on_failure: always
+deploy:
+  provider: heroku
+  run: "rake db:migrate"
+  api_key:
+    secure: VBxp8lQsiJiJSA8EYi4Pop1ld7FYhcpvua6af2IPfvtS58AywFz/6tC2un0XAdinw+elMthLRIRsIxS79UcAEa6D+XSMeT890uOLHC+pYF46gW93a8pkmRQo/fdwK3MJTWi+AlzmT/v90kbxGuupHY46eogxU7O+WQIFY/FT0vOHh4afKW+9oYx2YdB63EJKChC2szg7XBx+xiJdkbRqUYZW3OsXjt2qwmj1F888vMdsKYtgLK24C66OAWQDTaYUvA7Rhsa29Ong4hV+To/+9auF1SKjwOs0/XXfZXDwazdVWSVuJFLFRNX4NGRMyRsBPlR0hFziVhA6kShRt59x+H0oppo4CvdOY7brFKqmEEshatHqtd4Ue7vjZBuPgCY/BHHrAKfMwmS8tIr4wkUxLg07XB8rAbwk0NdOvU6C7dU21fYuMEUrUDKhY7f2wmumcDkmz4b/Y4O2dy51i+UayJtJu6Sy8TFKYG/4w5ClrzUsaIgOMmqrXu2rgzaXs/ln2llcoYzmcx5OzjTaoLyeqCSua8XQfUenfCfdD29OFg18pO9QcUGeY1hiYpzCVASOx/R+YgPrn6iQ7c479wSNPtw87mA7ZY+KNa6QWAaDzvUdpy5tTi7W+Xll4DaZsbukX9vnBGi2xXlU2jTgc5nhsB3sG74VeoJnpd2yTJsS13o=
+  app: cortita
+  on:
+    repo: carmelocuenca/cortita
